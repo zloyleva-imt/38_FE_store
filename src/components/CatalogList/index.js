@@ -1,7 +1,14 @@
 import React from 'react';
 
-export default () => {
+import CatalogItem from '../CatalogItem';
+
+export default (props) => {
+    const {products} = props;
     return (
-        <div></div>
+        <div className="row">
+            {
+                products.map(el => (<CatalogItem key={el.id} product={el}/>))
+            }
+        </div>
     );
 }
