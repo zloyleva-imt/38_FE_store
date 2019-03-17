@@ -11,7 +11,7 @@ export default class Catalog extends Component {
     };
 
     componentDidMount() {
-        axios.get("http://localhost:3001/products")
+        axios.get("http://localhost:5000/products")
             .then(res => {
                 console.log(res);
 
